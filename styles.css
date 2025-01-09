@@ -111,28 +111,24 @@ h1 {
 }
 
 .mode-buttons button {
-    background-color: #3498db;
-    width: 60px;
+    background-color: #3498db;  /* Blue for work mode */
+    width: 80px;
     white-space: pre-line;
     line-height: 1.2;
     padding: 0.6rem 1rem;
     text-align: center;
 }
 
-.mode-buttons button:hover {
-    background-color: #1368a1;
-    box-shadow: 0 5px 15px rgba(72, 201, 176, 0.2);
+.mode-buttons button.rest {
+    background-color: #1a237e;  /* Dark night sky blue for rest mode */
 }
 
-.mode-buttons button.rest {
-    background-color: #48c9b0;
-    width: 60px;
-    text-align: center;
+.mode-buttons button:hover {
+    background-color: #2980b9;  /* Darker blue for work mode hover */
 }
 
 .mode-buttons button.rest:hover {
-    background-color: #1db99a;
-    box-shadow: 0 5px 15px rgba(72, 201, 176, 0.2);
+    background-color: #0d1642;  /* Even darker night sky blue for rest mode hover */
 }
 
 /* Focus states for accessibility */

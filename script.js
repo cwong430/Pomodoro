@@ -49,7 +49,7 @@ function toggleMode() {
     isWorkTime = !isWorkTime;
     timeLeft = isWorkTime ? WORK_TIME : BREAK_TIME;
     modeText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
-    modeToggleButton.textContent = isWorkTime ? 'Rest\nMode' : 'Work\nMode';
+    modeToggleButton.textContent = isWorkTime ? '💪' : '🌙';
     modeToggleButton.classList.toggle('rest', !isWorkTime);
     modeText.classList.toggle('break', !isWorkTime);
     
@@ -119,3 +119,6 @@ addTimeButton.addEventListener('click', () => {
 
 // Initialize the timer
 resetTimer(); 
+
+// Update the initial button state
+modeToggleButton.textContent = '💪';  // Starting with work mode icon 
