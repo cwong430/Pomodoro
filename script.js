@@ -92,11 +92,7 @@ function pauseTimer() {
 function resetTimer() {
     clearInterval(timerId);
     timerId = null;
-    isWorkTime = true;
-    timeLeft = WORK_TIME;
-    modeToggleButton.textContent = 'Rest Mode';
-    modeToggleButton.classList.remove('rest');
-    modeText.textContent = 'Work Time';
+    timeLeft = isWorkTime ? WORK_TIME : BREAK_TIME;
     startButton.textContent = 'Start';
     updateDisplay();
 }

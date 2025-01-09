@@ -41,6 +41,18 @@ h1 {
     color: var(--text-color);
 }
 
+#mode-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2rem 0 3rem 0;
+    color: var(--text-color);
+}
+
+/* Add specific styling for Break Time */
+#mode-text.break {
+    margin-bottom: 4rem;  /* Increased from 3rem to 4rem for break mode */
+}
+
 .timer {
     font-size: 5rem;
     font-weight: 300;
@@ -48,6 +60,7 @@ h1 {
     color: var(--text-color);
     font-variant-numeric: tabular-nums;
     letter-spacing: -2px;
+    animation: subtle-pulse 2s infinite;
 }
 
 .controls {
@@ -57,12 +70,12 @@ h1 {
     align-items: center;
 }
 
+/* Base button styles */
 .controls button {
     font-size: 1rem;
-    margin: 0;
     padding: 0.8rem 2rem;
     cursor: pointer;
-    background-color: var(--primary-color);
+    background-color: #2ecc71;
     color: white;
     border: none;
     border-radius: 12px;
@@ -73,63 +86,53 @@ h1 {
 }
 
 .controls button:hover {
-    background-color: var(--primary-dark);
+    background-color: #27ae60;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
 }
 
-.mode {
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
-    color: #666;
-    font-weight: 500;
+/* Reset button */
+.controls button#reset {
+    background-color: #e74c3c;
 }
 
+.controls button#reset:hover {
+    background-color: #c0392b;
+}
+
+/* Mode buttons */
 .mode-buttons {
-    margin-top: 1rem;
+    margin-top: 2 rem;
     width: 100%;
 }
 
-.mode-buttons button {
-    background-color: var(--primary-color);
+.mode-buttons button.rest {
+    background-color: #3498db;
     width: 200px;
 }
 
-.mode-buttons button.rest {
-    background-color: var(--accent-color);
-}
-
-.mode-buttons button:hover {
-    background-color: var(--primary-dark);
-}
-
 .mode-buttons button.rest:hover {
-    background-color: var(--accent-dark);
+    background-color: #2980b9;
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
 }
 
-/* Add smooth transitions for all interactive elements */
-button {
-    transition: all 0.2s ease !important;
+.mode-buttons button {
+    background-color: #48c9b0;
 }
 
-/* Optional: Add a subtle pulse animation to the timer */
-@keyframes subtle-pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
+.mode-buttons button:hover {
+    background-color: #3dab95;
+    box-shadow: 0 5px 15px rgba(72, 201, 176, 0.2);
 }
 
-.timer {
-    animation: subtle-pulse 2s infinite;
-}
-
-/* Optional: Add focus states for better accessibility */
+/* Focus states for accessibility */
 button:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3);
 }
 
-button.rest:focus {
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+/* Animation */
+@keyframes subtle-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
 } 
