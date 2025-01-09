@@ -112,10 +112,11 @@ h1 {
 
 .mode-buttons button {
     background-color: #3498db;  /* Blue for work mode */
-    width: 80px;
+    width: 45px;
+    height: 45px;
     white-space: pre-line;
     line-height: 1.2;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem;
     text-align: center;
 }
 
