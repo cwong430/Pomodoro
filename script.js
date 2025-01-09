@@ -8,6 +8,7 @@ const startButton = document.getElementById('start');
 const resetButton = document.getElementById('reset');
 const modeToggleButton = document.getElementById('mode-toggle');
 const modeText = document.getElementById('mode-text');
+const addTimeButton = document.getElementById('add-time');
 
 const WORK_TIME = 25 * 60; // 25 minutes in seconds
 const BREAK_TIME = 5 * 60; // 5 minutes in seconds
@@ -48,10 +49,10 @@ function toggleMode() {
     isWorkTime = !isWorkTime;
     timeLeft = isWorkTime ? WORK_TIME : BREAK_TIME;
     modeText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
-    modeToggleButton.textContent = isWorkTime ? 'Rest Mode' : 'Work Mode';
+    modeToggleButton.textContent = isWorkTime ? 'Rest\nMode' : 'Work\nMode';
     modeToggleButton.classList.toggle('rest', !isWorkTime);
+    modeText.classList.toggle('break', !isWorkTime);
     
-    // Reset timer state
     clearInterval(timerId);
     timerId = null;
     startButton.textContent = 'Start';
@@ -110,6 +111,11 @@ startButton.addEventListener('click', () => {
 resetButton.addEventListener('click', resetTimer);
 
 modeToggleButton.addEventListener('click', toggleMode);
+
+addTimeButton.addEventListener('click', () => {
+    timeLeft += 300; // Add 5 minutes (300 seconds)
+    updateDisplay();
+});
 
 // Initialize the timer
 resetTimer(); 

@@ -28,6 +28,7 @@ body {
     box-shadow: var(--shadow);
     min-width: 320px;
     transition: transform 0.2s ease;
+    position: relative;
 }
 
 .container:hover {
@@ -35,8 +36,8 @@ body {
 }
 
 h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    font-weight: 700;
     margin-bottom: 2rem;
     color: var(--text-color);
 }
@@ -50,7 +51,7 @@ h1 {
 
 /* Add specific styling for Break Time */
 #mode-text.break {
-    margin-bottom: 4rem;  /* Increased from 3rem to 4rem for break mode */
+    margin-bottom: 4rem;
 }
 
 .timer {
@@ -93,6 +94,7 @@ h1 {
 /* Reset button */
 .controls button#reset {
     background-color: #e74c3c;
+    margin-bottom: 3rem;
 }
 
 .controls button#reset:hover {
@@ -101,26 +103,35 @@ h1 {
 
 /* Mode buttons */
 .mode-buttons {
-    margin-top: 2 rem;
-    width: 100%;
-}
-
-.mode-buttons button.rest {
-    background-color: #3498db;
-    width: 200px;
-}
-
-.mode-buttons button.rest:hover {
-    background-color: #2980b9;
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: auto;
+    margin-top: 0;
 }
 
 .mode-buttons button {
-    background-color: #48c9b0;
+    background-color: #3498db;
+    width: 60px;
+    white-space: pre-line;
+    line-height: 1.2;
+    padding: 0.6rem 1rem;
+    text-align: center;
 }
 
 .mode-buttons button:hover {
-    background-color: #3dab95;
+    background-color: #1368a1;
+    box-shadow: 0 5px 15px rgba(72, 201, 176, 0.2);
+}
+
+.mode-buttons button.rest {
+    background-color: #48c9b0;
+    width: 60px;
+    text-align: center;
+}
+
+.mode-buttons button.rest:hover {
+    background-color: #1db99a;
     box-shadow: 0 5px 15px rgba(72, 201, 176, 0.2);
 }
 
@@ -135,4 +146,13 @@ button:focus {
     0% { transform: scale(1); }
     50% { transform: scale(1.02); }
     100% { transform: scale(1); }
+}
+
+/* Add time button - vibrant orange */
+.controls button#add-time {
+    background-color: #f39c12;  /* Energetic orange */
+}
+
+.controls button#add-time:hover {
+    background-color: #d68910;  /* Darker orange */
 } 
