@@ -132,4 +132,14 @@ button:focus {
 
 button.rest:focus {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+/* Add these new styles */
+.controls button[data-state="pause"] {
+    background-color: #ff7675; /* Soft red color */
+}
+
+.controls button[data-state="pause"]:hover {
+    background-color: #e66767; /* Darker soft red for hover */
+    box-shadow: 0 5px 15px rgba(255, 118, 117, 0.2);
 } 

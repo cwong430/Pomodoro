@@ -81,6 +81,14 @@ function startTimer() {
     }, 1000);
 
     startButton.textContent = 'Pause';
+    startButton.setAttribute('data-state', 'pause');
+}
+
+function pauseTimer() {
+    clearInterval(timerId);
+    timerId = null;
+    startButton.textContent = 'Start';
+    startButton.removeAttribute('data-state');
 }
 
 function resetTimer() {
